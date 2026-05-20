@@ -63,15 +63,15 @@ export default function Tracker() {
   return (
     <div>
       <div style={{ marginBottom: 20 }}>
-        <h2 style={{ fontSize: 18, fontWeight: 700, color: 'var(--text)', marginBottom: 4 }}>100 experiences in 100 days</h2>
-        <p style={{ fontSize: 13, color: 'var(--text-muted)', marginBottom: 12 }}>
+        <h2 style={{ fontSize: 20, fontWeight: 700, color: 'var(--text)', marginBottom: 4 }}>100 experiences in 100 days</h2>
+        <p style={{ fontSize: 15, color: 'var(--text-muted)', marginBottom: 12 }}>
           Goal: complete all experiences before 16 weeks of age. Your progress saves automatically on this device.
         </p>
 
         {/* Progress */}
         <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, marginBottom: 8 }}>
-          <span style={{ fontSize: 32, fontWeight: 700, color: 'var(--text)' }}>{done}</span>
-          <span style={{ fontSize: 15, color: 'var(--text-muted)' }}>of {total} completed</span>
+          <span style={{ fontSize: 34, fontWeight: 700, color: 'var(--text)' }}>{done}</span>
+          <span style={{ fontSize: 17, color: 'var(--text-muted)' }}>of {total} completed</span>
         </div>
         <div style={{ background: 'var(--border)', borderRadius: 6, height: 10, overflow: 'hidden', marginBottom: 4 }}>
           <div style={{
@@ -79,7 +79,7 @@ export default function Tracker() {
             width: `${pct}%`, transition: 'width 0.4s ease'
           }} />
         </div>
-        <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 12, color: 'var(--text-muted)' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 14, color: 'var(--text-muted)' }}>
           <span>{pct}% complete</span>
           <span>{progressMsg}</span>
         </div>
@@ -103,8 +103,8 @@ export default function Tracker() {
                 }}
               >
                 <div style={{ width: 10, height: 10, borderRadius: '50%', background: catColor, flexShrink: 0 }} />
-                <span style={{ fontSize: 14, fontWeight: 600, flex: 1, color: 'var(--text)' }}>{cat}</span>
-                <span style={{ fontSize: 12, color: catDoneCount === items.length ? '#059669' : 'var(--text-muted)', fontWeight: catDoneCount === items.length ? 700 : 400 }}>
+                <span style={{ fontSize: 16, fontWeight: 600, flex: 1, color: 'var(--text)' }}>{cat}</span>
+                <span style={{ fontSize: 14, color: catDoneCount === items.length ? '#059669' : 'var(--text-muted)', fontWeight: catDoneCount === items.length ? 700 : 400 }}>
                   {catDoneCount} / {items.length}
                 </span>
                 <ChevronDown size={16} color="var(--text-subtle)" style={{ transform: isOpen ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s', flexShrink: 0 }} />
@@ -130,7 +130,7 @@ export default function Tracker() {
                             style={{ marginTop: 2, flexShrink: 0, accentColor: catColor, cursor: 'pointer' }}
                           />
                           <span style={{
-                            fontSize: 13, lineHeight: 1.4, cursor: 'pointer',
+                            fontSize: 15, lineHeight: 1.4, cursor: 'pointer',
                             color: isChecked ? 'var(--text-muted)' : 'var(--text-body-strong)',
                             textDecoration: isChecked ? 'line-through' : 'none'
                           }}>{item}</span>
@@ -149,7 +149,7 @@ export default function Tracker() {
         onClick={resetAll}
         style={{
           marginTop: 16, padding: '8px 16px', border: '1px solid var(--border-strong)',
-          borderRadius: 8, background: 'var(--surface)', color: 'var(--text-muted)', fontSize: 13,
+          borderRadius: 8, background: 'var(--surface)', color: 'var(--text-muted)', fontSize: 15,
           cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 6
         }}
       >

@@ -34,11 +34,11 @@ function WeekCard({ week }) {
         }}
       >
         <span style={{
-          fontSize: 11, fontWeight: 600, padding: '2px 10px', borderRadius: 20,
+          fontSize: 13, fontWeight: 600, padding: '2px 10px', borderRadius: 20,
           background: week.badgeColor, color: week.badgeText, whiteSpace: 'nowrap'
         }}>{week.badge}</span>
-        <span style={{ fontSize: 14, fontWeight: 600, flex: 1, color: 'var(--text)' }}>{week.week}</span>
-        <span style={{ fontSize: 12, color: 'var(--text-muted)', whiteSpace: 'nowrap' }}>{week.age}</span>
+        <span style={{ fontSize: 16, fontWeight: 600, flex: 1, color: 'var(--text)' }}>{week.week}</span>
+        <span style={{ fontSize: 14, color: 'var(--text-muted)', whiteSpace: 'nowrap' }}>{week.age}</span>
         <ChevronDown size={16} color="var(--text-subtle)" style={{ transform: open ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s', flexShrink: 0 }} />
       </button>
 
@@ -50,7 +50,7 @@ function WeekCard({ week }) {
             padding: '10px 14px', marginBottom: 14, display: 'flex', alignItems: 'flex-start', gap: 8
           }}>
             <Flag size={14} color="#7C3AED" style={{ marginTop: 2, flexShrink: 0 }} />
-            <span style={{ fontSize: 13, color: 'var(--milestone-text)' }}>{week.milestone}</span>
+            <span style={{ fontSize: 15, color: 'var(--milestone-text)' }}>{week.milestone}</span>
           </div>
 
           {/* Task groups */}
@@ -58,7 +58,7 @@ function WeekCard({ week }) {
             <div key={group.label} style={{ marginBottom: 14 }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 6 }}>
                 <div style={{ width: 8, height: 8, borderRadius: '50%', background: group.color, flexShrink: 0 }} />
-                <span style={{ fontSize: 11, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--text-subtle)' }}>
+                <span style={{ fontSize: 13, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--text-subtle)' }}>
                   {group.label}
                 </span>
               </div>
@@ -66,7 +66,7 @@ function WeekCard({ week }) {
                 {group.tasks.map((task, i) => (
                   <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: 8 }}>
                     <div style={{ width: 5, height: 5, borderRadius: '50%', background: group.color, flexShrink: 0, marginTop: 7 }} />
-                    <span style={{ fontSize: 13, color: 'var(--text-body)', lineHeight: 1.5 }}>{task}</span>
+                    <span style={{ fontSize: 15, color: 'var(--text-body)', lineHeight: 1.5 }}>{task}</span>
                   </div>
                 ))}
               </div>
@@ -78,7 +78,7 @@ function WeekCard({ week }) {
             <div style={{ marginBottom: 0 }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 8 }}>
                 <div style={{ width: 8, height: 8, borderRadius: '50%', background: '#2563EB', flexShrink: 0 }} />
-                <span style={{ fontSize: 11, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--text-subtle)' }}>
+                <span style={{ fontSize: 13, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--text-subtle)' }}>
                   100 experiences this week
                 </span>
               </div>
@@ -89,12 +89,12 @@ function WeekCard({ week }) {
                 }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 8 }}>
                     <CheckSquare size={13} color="#2563EB" />
-                    <span style={{ fontSize: 12, fontWeight: 600, color: 'var(--exp-title)' }}>{g.title}</span>
+                    <span style={{ fontSize: 14, fontWeight: 600, color: 'var(--exp-title)' }}>{g.title}</span>
                   </div>
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: 5 }}>
                     {g.items.map((item) => (
                       <span key={item} style={{
-                        fontSize: 12, padding: '3px 9px', borderRadius: 20,
+                        fontSize: 14, padding: '3px 9px', borderRadius: 20,
                         background: 'var(--exp-chip-bg)', color: 'var(--exp-chip-text)', border: '1px solid var(--exp-border)'
                       }}>{item}</span>
                     ))}
@@ -116,8 +116,8 @@ export default function WeeklyPlan() {
   return (
     <div>
       <div style={{ marginBottom: 16 }}>
-        <h2 style={{ fontSize: 18, fontWeight: 700, color: 'var(--text)', marginBottom: 4 }}>Week-by-week program</h2>
-        <p style={{ fontSize: 13, color: 'var(--text-muted)' }}>Health · Training · Daily care · Exercise · 100 Experiences — from your Goldiva Goldens course materials</p>
+        <h2 style={{ fontSize: 20, fontWeight: 700, color: 'var(--text)', marginBottom: 4 }}>Week-by-week program</h2>
+        <p style={{ fontSize: 15, color: 'var(--text-muted)' }}>Health · Training · Daily care · Exercise · 100 Experiences — from your Goldiva Goldens course materials</p>
       </div>
 
       {/* Legend */}
@@ -125,7 +125,7 @@ export default function WeeklyPlan() {
         {LEGEND.map(l => (
           <div key={l.label} style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
             <div style={{ width: 8, height: 8, borderRadius: '50%', background: l.color }} />
-            <span style={{ fontSize: 12, color: 'var(--text-muted)' }}>{l.label}</span>
+            <span style={{ fontSize: 14, color: 'var(--text-muted)' }}>{l.label}</span>
           </div>
         ))}
       </div>
@@ -134,7 +134,7 @@ export default function WeeklyPlan() {
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginBottom: 14 }}>
         {PHASES.map(p => (
           <button key={p.key} onClick={() => setPhase(p.key)} style={{
-            padding: '5px 12px', borderRadius: 20, fontSize: 12, cursor: 'pointer',
+            padding: '5px 12px', borderRadius: 20, fontSize: 14, cursor: 'pointer',
             border: '1px solid', transition: 'all 0.15s',
             borderColor: phase === p.key ? 'var(--text-body-strong)' : 'var(--border-strong)',
             background: phase === p.key ? 'var(--chip-bg)' : 'var(--surface)',
